@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "editorconfig.editorconfig",
+    "xabikos.javascriptsnippets",
+    "fabiospampinato.vscode-highlight",
+    "github.vscode-pull-request-github",
+  ]
+}

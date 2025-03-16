@@ -1,0 +1,63 @@
+{
+  "name": "quickstart-nitro-api-server",
+  "version": "1.0.0",
+  "description": "A lightweight, fast API server built with Nitro that includes Swagger documentation, theme support, and example endpoints.",
+  "private": true,
+  "type": "module",
+  "keywords": [
+    "nuxt",
+    "nitro",
+    "api",
+    "server",
+    "standalone",
+    "swagger",
+    "documentation",
+    "example",
+    "gae",
+    "google app engine",
+    "rest",
+    "restful"
+  ],
+  "author": "Eka Adeliawan",
+  "packageManager": "pnpm@10.6.2",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "scripts": {
+    "dev": "cross-env PORT=8080 HOST=127.0.0.1 nitro dev",
+    "build": "nitro build",
+    "start": "cross-env PORT=8080 HOST=127.0.0.1 node dist/server/index.mjs",
+    "dev:clean": "rimraf node_modules/.cache && pnpm store prune && nitro dev",
+    "clean:all": "rimraf node_modules/ && rimraf .nitro/ && rimraf .output/ && rimraf dist/ && pnpm store prune",
+    "lint": "eslint \"src/**/*.ts\"",
+    "lint:all": "eslint \"src/**/*.ts\" && eslint \"src/**/*.{js,mjs}\"",
+    "lint:fix": "eslint \"src/**/*.ts\" --fix && eslint \"src/**/*.{js,mjs}\" --fix"
+  },
+  "dependencies": {
+    "@google-cloud/secret-manager": "^5.6.0",
+    "defu": "^6.1.4",
+    "firebase-admin": "^13.2.0",
+    "h3": "^1.15.1",
+    "js-yaml": "^4.1.0",
+    "lodash": "^4.17.21",
+    "nitropack": "^2.11.6",
+    "swagger-jsdoc": "^6.2.8",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "@types/js-yaml": "^4.0.9",
+    "@types/lodash": "^4.17.16",
+    "@types/node": "^22.13.10",
+    "@types/swagger-jsdoc": "^6.0.4",
+    "@typescript-eslint/eslint-plugin": "^8.26.1",
+    "cross-env": "^7.0.3",
+    "eslint": "^9.22.0",
+    "globals": "^16.0.0",
+    "rimraf": "^6.0.1",
+    "ts-jest": "^29.2.6",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.2",
+    "typescript-eslint": "^8.26.1"
+  }
+}

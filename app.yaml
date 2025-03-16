@@ -1,0 +1,19 @@
+runtime: nodejs22
+env: standard
+
+instance_class: F1
+
+automatic_scaling:
+  min_instances: 1
+  max_instances: 1
+  min_idle_instances: 0
+  max_idle_instances: 1
+
+env_variables:
+  NODE_ENV: 'production'
+  TEST_ENV: true
+
+handlers:
+  - url: /.*
+    script: auto
+    secure: always
